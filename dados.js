@@ -1,21 +1,16 @@
 /* =============================================================================
-   BANCO DE DADOS DO SITE — "Vida em Estudo" (Seminário / EBD)
+   BANCO DE DADOS DO SITE — "Vida em Estudo" (Assembleia de Deus Mantiquira)
    -----------------------------------------------------------------------------
    Este é o ÚNICO arquivo que você precisa editar no dia a dia:
      - trocar senha ou nome de alguém        -> seção 1 (USUARIOS)
      - adicionar/trocar um vídeo de aula      -> seção 2 (MODULOS_AULAS)
      - adicionar/trocar um PDF de material    -> seção 3 (MODULOS_MATERIAIS)
      - adicionar um evento no calendário       -> seção 4 (EVENTOS)
-
-   Não é necessário mexer em nenhum outro arquivo (style.css ou script.js)
-   para essas tarefas do dia a dia.
    ============================================================================= */
 
 
 /* -----------------------------------------------------------------------------
    1) USUÁRIOS
-   Cada linha é um login válido. Para trocar uma senha, troque o valor de
-   "senha". Para adicionar uma nova pessoa, copie uma linha e mude os dados.
    ----------------------------------------------------------------------------- */
 const USUARIOS = [
   { usuario: "aluno",     senha: "ebd2026", nome: "Aluno(a)" },
@@ -24,12 +19,7 @@ const USUARIOS = [
 
 
 /* -----------------------------------------------------------------------------
-   2) AULAS — organizadas por módulo teológico, na ordem do seminário.
-   Cada módulo tem: um nome, uma descrição curta e uma lista de 3 aulas.
-   Cada aula tem: título, professor, data, duração e o ID do vídeo do YouTube
-   (o ID é o que vem depois de "v=" no link do YouTube).
-   Para adicionar uma aula nova, copie um bloco dentro de "aulas".
-   Para adicionar um módulo novo, copie um bloco inteiro de módulo.
+   2) AULAS — 4 por módulo, em ordem cronológica.
    ----------------------------------------------------------------------------- */
 const MODULOS_AULAS = [
   {
@@ -59,6 +49,14 @@ const MODULOS_AULAS = [
         duracao: "45 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "Regras básicas para interpretar corretamente qualquer texto bíblico."
+      },
+      {
+        titulo: "A suficiência das Escrituras",
+        professor: "Prof. Marcos Vieira",
+        data: "28 jun 2026",
+        duracao: "38 min",
+        youtubeId: "dQw4w9WgXcQ",
+        descricao: "Por que a Bíblia é suficiente para a fé e a prática cristã."
       }
     ]
   },
@@ -69,7 +67,7 @@ const MODULOS_AULAS = [
       {
         titulo: "Os atributos de Deus",
         professor: "Profa. Ana Beatriz",
-        data: "28 jun 2026",
+        data: "05 jul 2026",
         duracao: "40 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "Quem Deus é: sua santidade, amor, justiça e demais atributos."
@@ -77,7 +75,7 @@ const MODULOS_AULAS = [
       {
         titulo: "A doutrina da Trindade",
         professor: "Profa. Ana Beatriz",
-        data: "05 jul 2026",
+        data: "12 jul 2026",
         duracao: "44 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "Um Deus em três pessoas: Pai, Filho e Espírito Santo."
@@ -85,10 +83,18 @@ const MODULOS_AULAS = [
       {
         titulo: "A soberania e a providência de Deus",
         professor: "Profa. Ana Beatriz",
-        data: "12 jul 2026",
+        data: "19 jul 2026",
         duracao: "37 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "Como Deus governa e cuida de toda a criação."
+      },
+      {
+        titulo: "A revelação geral e a revelação especial",
+        professor: "Profa. Ana Beatriz",
+        data: "26 jul 2026",
+        duracao: "36 min",
+        youtubeId: "dQw4w9WgXcQ",
+        descricao: "Como Deus se revela na natureza e, de forma plena, nas Escrituras e em Cristo."
       }
     ]
   },
@@ -99,7 +105,7 @@ const MODULOS_AULAS = [
       {
         titulo: "A pessoa de Cristo: divindade e humanidade",
         professor: "Prof. Marcos Vieira",
-        data: "19 jul 2026",
+        data: "02 ago 2026",
         duracao: "43 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "Como Jesus é plenamente Deus e plenamente homem."
@@ -107,7 +113,7 @@ const MODULOS_AULAS = [
       {
         titulo: "A obra expiatória de Cristo",
         professor: "Prof. Marcos Vieira",
-        data: "26 jul 2026",
+        data: "09 ago 2026",
         duracao: "46 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "O sacrifício de Cristo na cruz e o perdão dos pecados."
@@ -115,10 +121,18 @@ const MODULOS_AULAS = [
       {
         titulo: "A ressurreição e exaltação de Cristo",
         professor: "Prof. Marcos Vieira",
-        data: "02 ago 2026",
+        data: "16 ago 2026",
         duracao: "41 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "A vitória de Cristo sobre a morte e sua glorificação."
+      },
+      {
+        titulo: "Os ofícios de Cristo: profeta, sacerdote e rei",
+        professor: "Prof. Marcos Vieira",
+        data: "23 ago 2026",
+        duracao: "40 min",
+        youtubeId: "dQw4w9WgXcQ",
+        descricao: "Os três papéis que Cristo cumpre em favor do seu povo."
       }
     ]
   },
@@ -129,7 +143,7 @@ const MODULOS_AULAS = [
       {
         titulo: "A pessoa do Espírito Santo",
         professor: "Profa. Camila Rocha",
-        data: "09 ago 2026",
+        data: "30 ago 2026",
         duracao: "38 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "O Espírito Santo como pessoa da Trindade, não apenas uma força."
@@ -137,7 +151,7 @@ const MODULOS_AULAS = [
       {
         titulo: "Os dons espirituais",
         professor: "Profa. Camila Rocha",
-        data: "16 ago 2026",
+        data: "06 set 2026",
         duracao: "42 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "Os dons dados pelo Espírito para o serviço na igreja."
@@ -145,10 +159,18 @@ const MODULOS_AULAS = [
       {
         titulo: "O fruto do Espírito na vida cristã",
         professor: "Profa. Camila Rocha",
-        data: "23 ago 2026",
+        data: "13 set 2026",
         duracao: "40 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "Como o caráter de Cristo se forma em nós pelo Espírito."
+      },
+      {
+        titulo: "O batismo no Espírito Santo",
+        professor: "Profa. Camila Rocha",
+        data: "20 set 2026",
+        duracao: "44 min",
+        youtubeId: "dQw4w9WgXcQ",
+        descricao: "O que significa ser batizado no Espírito Santo, segundo as Escrituras."
       }
     ]
   },
@@ -159,7 +181,7 @@ const MODULOS_AULAS = [
       {
         titulo: "A graça e a eleição",
         professor: "Prof. Marcos Vieira",
-        data: "30 ago 2026",
+        data: "27 set 2026",
         duracao: "44 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "Como a salvação começa pela graça imerecida de Deus."
@@ -167,7 +189,7 @@ const MODULOS_AULAS = [
       {
         titulo: "Justificação pela fé",
         professor: "Prof. Marcos Vieira",
-        data: "06 set 2026",
+        data: "04 out 2026",
         duracao: "39 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "Como somos declarados justos diante de Deus, pela fé em Cristo."
@@ -175,10 +197,18 @@ const MODULOS_AULAS = [
       {
         titulo: "Santificação e perseverança",
         professor: "Prof. Marcos Vieira",
-        data: "13 set 2026",
+        data: "11 out 2026",
         duracao: "41 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "O processo contínuo de crescimento na santidade cristã."
+      },
+      {
+        titulo: "A adoção e a garantia da salvação",
+        professor: "Prof. Marcos Vieira",
+        data: "18 out 2026",
+        duracao: "37 min",
+        youtubeId: "dQw4w9WgXcQ",
+        descricao: "Sermos filhos de Deus e a certeza que a Palavra nos dá da salvação."
       }
     ]
   },
@@ -189,7 +219,7 @@ const MODULOS_AULAS = [
       {
         titulo: "A natureza e a missão da igreja",
         professor: "Profa. Ana Beatriz",
-        data: "20 set 2026",
+        data: "25 out 2026",
         duracao: "40 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "O que é a igreja e qual é o seu propósito no mundo."
@@ -197,7 +227,7 @@ const MODULOS_AULAS = [
       {
         titulo: "Os ofícios e ordenanças",
         professor: "Profa. Ana Beatriz",
-        data: "27 set 2026",
+        data: "01 nov 2026",
         duracao: "37 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "Pastores e diáconos, batismo e Ceia do Senhor."
@@ -205,10 +235,18 @@ const MODULOS_AULAS = [
       {
         titulo: "A igreja local e a igreja universal",
         professor: "Profa. Ana Beatriz",
-        data: "04 out 2026",
+        data: "08 nov 2026",
         duracao: "38 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "A diferença entre a igreja que reunimos e o Corpo de Cristo como um todo."
+      },
+      {
+        titulo: "A disciplina e a unidade da igreja",
+        professor: "Profa. Ana Beatriz",
+        data: "15 nov 2026",
+        duracao: "36 min",
+        youtubeId: "dQw4w9WgXcQ",
+        descricao: "Como a igreja cuida de seus membros e preserva a unidade do corpo."
       }
     ]
   },
@@ -219,7 +257,7 @@ const MODULOS_AULAS = [
       {
         titulo: "A segunda vinda de Cristo",
         professor: "Prof. Marcos Vieira",
-        data: "11 out 2026",
+        data: "22 nov 2026",
         duracao: "45 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "A promessa do retorno de Jesus e a esperança cristã."
@@ -227,7 +265,7 @@ const MODULOS_AULAS = [
       {
         titulo: "O milênio e os últimos eventos",
         professor: "Prof. Marcos Vieira",
-        data: "18 out 2026",
+        data: "29 nov 2026",
         duracao: "47 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "Uma visão geral das principais interpretações sobre o fim dos tempos."
@@ -235,10 +273,18 @@ const MODULOS_AULAS = [
       {
         titulo: "O juízo final e a eternidade",
         professor: "Prof. Marcos Vieira",
-        data: "25 out 2026",
+        data: "06 dez 2026",
         duracao: "43 min",
         youtubeId: "dQw4w9WgXcQ",
         descricao: "O juízo de Deus e a esperança da vida eterna."
+      },
+      {
+        titulo: "Panorama das visões escatológicas",
+        professor: "Prof. Marcos Vieira",
+        data: "13 dez 2026",
+        duracao: "48 min",
+        youtubeId: "dQw4w9WgXcQ",
+        descricao: "Um resumo comparativo das principais interpretações cristãs sobre o fim dos tempos."
       }
     ]
   }
@@ -246,8 +292,7 @@ const MODULOS_AULAS = [
 
 
 /* -----------------------------------------------------------------------------
-   3) MATERIAIS (PDFs) — na mesma ordem e com os mesmos módulos das aulas.
-   Troque o "href" de cada item pelo link real do PDF (Google Drive, etc.).
+   3) MATERIAIS (PDFs) — 4 por módulo, na mesma ordem das aulas.
    ----------------------------------------------------------------------------- */
 const MODULOS_MATERIAIS = [
   {
@@ -255,7 +300,8 @@ const MODULOS_MATERIAIS = [
     itens: [
       { nome: "A inspiração e autoridade da Bíblia", desc: "PDF · 1.1 MB", href: "#" },
       { nome: "O cânon das Escrituras", desc: "PDF · 890 KB", href: "#" },
-      { nome: "Hermenêutica: princípios de interpretação", desc: "PDF · 1.3 MB", href: "#" }
+      { nome: "Hermenêutica: princípios de interpretação", desc: "PDF · 1.3 MB", href: "#" },
+      { nome: "A suficiência das Escrituras", desc: "PDF · 820 KB", href: "#" }
     ]
   },
   {
@@ -263,7 +309,8 @@ const MODULOS_MATERIAIS = [
     itens: [
       { nome: "Os atributos de Deus", desc: "PDF · 970 KB", href: "#" },
       { nome: "A doutrina da Trindade", desc: "PDF · 1.0 MB", href: "#" },
-      { nome: "A soberania e a providência de Deus", desc: "PDF · 860 KB", href: "#" }
+      { nome: "A soberania e a providência de Deus", desc: "PDF · 860 KB", href: "#" },
+      { nome: "A revelação geral e a revelação especial", desc: "PDF · 900 KB", href: "#" }
     ]
   },
   {
@@ -271,7 +318,8 @@ const MODULOS_MATERIAIS = [
     itens: [
       { nome: "A pessoa de Cristo: divindade e humanidade", desc: "PDF · 1.2 MB", href: "#" },
       { nome: "A obra expiatória de Cristo", desc: "PDF · 1.1 MB", href: "#" },
-      { nome: "A ressurreição e exaltação de Cristo", desc: "PDF · 950 KB", href: "#" }
+      { nome: "A ressurreição e exaltação de Cristo", desc: "PDF · 950 KB", href: "#" },
+      { nome: "Os ofícios de Cristo: profeta, sacerdote e rei", desc: "PDF · 940 KB", href: "#" }
     ]
   },
   {
@@ -279,7 +327,8 @@ const MODULOS_MATERIAIS = [
     itens: [
       { nome: "A pessoa do Espírito Santo", desc: "PDF · 900 KB", href: "#" },
       { nome: "Os dons espirituais", desc: "PDF · 1.0 MB", href: "#" },
-      { nome: "O fruto do Espírito na vida cristã", desc: "PDF · 870 KB", href: "#" }
+      { nome: "O fruto do Espírito na vida cristã", desc: "PDF · 870 KB", href: "#" },
+      { nome: "O batismo no Espírito Santo", desc: "PDF · 950 KB", href: "#" }
     ]
   },
   {
@@ -287,7 +336,8 @@ const MODULOS_MATERIAIS = [
     itens: [
       { nome: "A graça e a eleição", desc: "PDF · 1.1 MB", href: "#" },
       { nome: "Justificação pela fé", desc: "PDF · 980 KB", href: "#" },
-      { nome: "Santificação e perseverança", desc: "PDF · 1.0 MB", href: "#" }
+      { nome: "Santificação e perseverança", desc: "PDF · 1.0 MB", href: "#" },
+      { nome: "A adoção e a garantia da salvação", desc: "PDF · 890 KB", href: "#" }
     ]
   },
   {
@@ -295,7 +345,8 @@ const MODULOS_MATERIAIS = [
     itens: [
       { nome: "A natureza e a missão da igreja", desc: "PDF · 900 KB", href: "#" },
       { nome: "Os ofícios e ordenanças", desc: "PDF · 850 KB", href: "#" },
-      { nome: "A igreja local e a igreja universal", desc: "PDF · 880 KB", href: "#" }
+      { nome: "A igreja local e a igreja universal", desc: "PDF · 880 KB", href: "#" },
+      { nome: "A disciplina e a unidade da igreja", desc: "PDF · 860 KB", href: "#" }
     ]
   },
   {
@@ -303,7 +354,8 @@ const MODULOS_MATERIAIS = [
     itens: [
       { nome: "A segunda vinda de Cristo", desc: "PDF · 1.2 MB", href: "#" },
       { nome: "O milênio e os últimos eventos", desc: "PDF · 1.3 MB", href: "#" },
-      { nome: "O juízo final e a eternidade", desc: "PDF · 1.0 MB", href: "#" }
+      { nome: "O juízo final e a eternidade", desc: "PDF · 1.0 MB", href: "#" },
+      { nome: "Panorama das visões escatológicas", desc: "PDF · 1.1 MB", href: "#" }
     ]
   }
 ];
@@ -313,8 +365,8 @@ const MODULOS_MATERIAIS = [
    4) EVENTOS DO CALENDÁRIO — formato de data "AAAA-MM-DD".
    ----------------------------------------------------------------------------- */
 const EVENTOS = [
-  { data: "2026-07-05", titulo: "Aula: A doutrina da Trindade" },
-  { data: "2026-07-19", titulo: "Aula: A pessoa de Cristo" },
-  { data: "2026-07-26", titulo: "Encontro de encerramento do módulo" },
-  { data: "2026-08-02", titulo: "Aula: A ressurreição de Cristo" }
+  { data: "2026-07-12", titulo: "Aula: A doutrina da Trindade" },
+  { data: "2026-08-02", titulo: "Aula: A pessoa de Cristo" },
+  { data: "2026-08-16", titulo: "Aula: A ressurreição de Cristo" },
+  { data: "2026-08-23", titulo: "Encontro de encerramento do módulo de Cristologia" }
 ];
