@@ -363,3 +363,11 @@ a{color:inherit;}
   .main{ padding:26px 20px 50px; }
   .cal-wrap{ grid-template-columns:1fr; }
 }
+
+.brand-logo{
+  width: 100%;
+  max-width: 168px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
